@@ -1,15 +1,20 @@
 "use strict";
 const React = require("react");
-const { Text } = require("ink");
+const { Text, Box, Newline } = require("ink");
 const importJsx = require("import-jsx");
+const Gradient = require("ink-gradient");
+const BigText = require("ink-big-text");
 
 const Table = importJsx("./components/Table.js");
 
 const App = ({ name = "Stranger" }) => (
-	<Text>
-		Hello, <Text color="green">{name}</Text>
+	<>
+		<Gradient name="summer">
+			<BigText text="crypto cli" align="center" font="chrome" />
+		</Gradient>
 		<Table />
-	</Text>
+		<Newline />
+	</>
 );
 
 module.exports = App;
